@@ -5,9 +5,9 @@
 ---
 
 ## 1. Probala ahora
-- **App publicada (Online 24/7):** [https://ais-pre-5aga45xqbfsvnxxfuedj2o-757988679085.us-east1.run.app](https://ais-pre-5aga45xqbfsvnxxfuedj2o-757988679085.us-east1.run.app)
+- **App publicada (Online en GitHub Pages):** [https://diegozuniga07.github.io/Mi-Portafolio/](https://diegozuniga07.github.io/Mi-Portafolio/)
 - **Repositorio oficial en GitHub:** [https://github.com/DiegoZuniga07/Mi-Portafolio](https://github.com/DiegoZuniga07/Mi-Portafolio)
-- **Despliegue activo:** Servidor Express full-stack + Google Cloud Run (React 19 + Node.js + Gemini 3.8 Flash).
+- **Despliegue activo:** GitHub Pages (Producción global HTTPS).
 - **Código QR para celular:**
   ```text
   [█████████████████████████████]
