@@ -1,0 +1,6 @@
+{
+  "name": "MI PORTAFOLIO - Diego Zúñiga (INDEL 3DS A)",
+  "description": "Ejercicio 37: Portafolio profesional de proyectos de desarrollo de software para postulación universitaria. Incluye bitácora P0-M5, persistencia local y optimización con IA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
