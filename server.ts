@@ -215,6 +215,16 @@ Notas sueltas del estudiante:
     res.download(filePath, 'DOCUMENTO_ENTREGA_DIEGO_ZUNIGA_EJ37.html');
   });
 
+  app.get('/api/download/repo-zip', (_req, res) => {
+    const filePath = path.resolve(__dirname, 'public', 'mi-portafolio.zip');
+    res.download(filePath, 'mi-portafolio-completo.zip');
+  });
+
+  app.get('/api/download/git-bundle', (_req, res) => {
+    const filePath = path.resolve(__dirname, 'public', 'mi-portafolio.bundle');
+    res.download(filePath, 'mi-portafolio.bundle');
+  });
+
   // Health check
   app.get('/api/health', (_req, res) => {
     res.json({
