@@ -5,9 +5,9 @@
 ---
 
 ## 1. Probala ahora
-- **App publicada:** [https://diegozuniga07.github.io/Mi-Portafolio](https://diegozuniga07.github.io/Mi-Portafolio)
+- **App publicada (Online 24/7):** [https://ais-pre-5aga45xqbfsvnxxfuedj2o-757988679085.us-east1.run.app](https://ais-pre-5aga45xqbfsvnxxfuedj2o-757988679085.us-east1.run.app)
 - **Repositorio oficial en GitHub:** [https://github.com/DiegoZuniga07/Mi-Portafolio](https://github.com/DiegoZuniga07/Mi-Portafolio)
-- **Despliegue activo:** Entorno AI Studio Build / Servidor Express full-stack.
+- **Despliegue activo:** Servidor Express full-stack + Google Cloud Run (React 19 + Node.js + Gemini 3.8 Flash).
 - **Código QR para celular:**
   ```text
   [█████████████████████████████]

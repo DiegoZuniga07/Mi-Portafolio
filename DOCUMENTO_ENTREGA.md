@@ -11,7 +11,7 @@
 Nombre: Diego Fernando Zúñiga Aguilar
 N.º de ejercicio: 37 · MI PORTAFOLIO
 Enlace del repositorio: https://github.com/DiegoZuniga07/Mi-Portafolio
-URL de la app publicada: https://diegozuniga07.github.io/Mi-Portafolio
+URL de la app publicada: https://ais-pre-5aga45xqbfsvnxxfuedj2o-757988679085.us-east1.run.app
 ```
 
 ---
@@ -39,8 +39,8 @@ URL de la app publicada: https://diegozuniga07.github.io/Mi-Portafolio
 > Plataforma web interactiva para que estudiantes de bachillerato técnico registren, organicen y exhiban sus proyectos de desarrollo de software con rigor profesional al postular a la universidad y al campo laboral.
 
 ### 1. Probala ahora
-- **App publicada:** https://diegozuniga07.github.io/Mi-Portafolio
-- **Código QR:** Disponible en la barra de herramientas de la app y en `evidencias/qr.svg`.
+- **App publicada:** https://ais-pre-5aga45xqbfsvnxxfuedj2o-757988679085.us-east1.run.app
+- **Repositorio oficial en GitHub:** https://github.com/DiegoZuniga07/Mi-Portafolio
 - **Usuario de prueba:** No requiere autenticación; incluye catálogo precargado y persistente.
 
 ### 2. Capturas
