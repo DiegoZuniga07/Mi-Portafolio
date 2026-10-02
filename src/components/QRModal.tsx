@@ -12,10 +12,11 @@ export const QRModal: React.FC<QRModalProps> = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://diegozuniga07.github.io/Mi-Portafolio/';
+  // URL oficial definitiva publicada y accesible desde cualquier red móvil
+  const OFFICIAL_URL = 'https://diegozuniga07.github.io/Mi-Portafolio/';
 
   const copyUrl = () => {
-    navigator.clipboard.writeText(currentUrl);
+    navigator.clipboard.writeText(OFFICIAL_URL);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -41,28 +42,28 @@ export const QRModal: React.FC<QRModalProps> = ({ isOpen, onClose }) => {
           «La app se prueba en un celular real, no solo en el emulador ni en la computadora. Escaneá este código con la cámara de tu teléfono.»
         </p>
 
-        {/* QR Code Container - Código QR 100% Real y Escaneable */}
-        <div className="p-3 bg-white rounded-2xl inline-block shadow-2xl mb-4 border-4 border-cyan-500/30">
+        {/* QR Code Container - Siempre codifica https://diegozuniga07.github.io/Mi-Portafolio/ */}
+        <div className="p-4 bg-white rounded-2xl inline-block shadow-2xl mb-4 border-4 border-cyan-400/40">
           <QRCodeSVG
-            value={currentUrl}
-            size={200}
+            value={OFFICIAL_URL}
+            size={220}
             level="H"
             includeMargin={true}
             bgColor="#ffffff"
-            fgColor="#020617"
+            fgColor="#000000"
           />
         </div>
 
         {/* Botón para abrir directamente o descargar imagen */}
         <div className="flex items-center justify-center gap-2 mb-4">
           <a
-            href={currentUrl}
+            href={OFFICIAL_URL}
             target="_blank"
             rel="noreferrer"
             className="px-3 py-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-xs font-semibold flex items-center gap-1.5 transition-colors"
           >
             <ExternalLink className="w-3.5 h-3.5" />
-            <span>Abrir en otra pestaña</span>
+            <span>Abrir en navegador</span>
           </a>
           <a
             href="/qr.png"
@@ -76,8 +77,8 @@ export const QRModal: React.FC<QRModalProps> = ({ isOpen, onClose }) => {
 
         {/* URL Display */}
         <div className="flex items-center gap-2 p-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-300 mb-4">
-          <span className="truncate font-mono flex-1 text-left px-1 text-[11px] text-cyan-300">
-            {currentUrl}
+          <span className="truncate font-mono flex-1 text-left px-1 text-[11px] text-cyan-300 font-semibold">
+            {OFFICIAL_URL}
           </span>
           <button
             onClick={copyUrl}
