@@ -1,5 +1,6 @@
 import React from 'react';
-import { X, QrCode, Smartphone, Copy, Check, ExternalLink } from 'lucide-react';
+import { X, Smartphone, Copy, Check, ExternalLink, Download } from 'lucide-react';
+import { QRCodeSVG } from 'qrcode.react';
 
 interface QRModalProps {
   isOpen: boolean;
@@ -36,42 +37,41 @@ export const QRModal: React.FC<QRModalProps> = ({ isOpen, onClose }) => {
         <h3 className="text-lg font-bold text-white mb-1">
           Probar en Celular Real (M3)
         </h3>
-        <p className="text-xs text-slate-400 mb-5 leading-relaxed">
+        <p className="text-xs text-slate-400 mb-4 leading-relaxed">
           «La app se prueba en un celular real, no solo en el emulador ni en la computadora. Escaneá este código con la cámara de tu teléfono.»
         </p>
 
-        {/* QR Code Container - Inline SVG vector garantizado sin conexión */}
-        <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 inline-block shadow-inner mb-4">
-          <svg viewBox="0 0 160 160" width="180" height="180" className="mx-auto">
-            <rect width="160" height="160" fill="#020617" rx="10"/>
-            {/* Corner Top-Left */}
-            <rect x="15" y="15" width="40" height="40" fill="none" stroke="#22d3ee" strokeWidth="6" rx="4"/>
-            <rect x="27" y="27" width="16" height="16" fill="#22d3ee" rx="2"/>
-            {/* Corner Top-Right */}
-            <rect x="105" y="15" width="40" height="40" fill="none" stroke="#22d3ee" strokeWidth="6" rx="4"/>
-            <rect x="117" y="27" width="16" height="16" fill="#22d3ee" rx="2"/>
-            {/* Corner Bottom-Left */}
-            <rect x="15" y="105" width="40" height="40" fill="none" stroke="#22d3ee" strokeWidth="6" rx="4"/>
-            <rect x="27" y="117" width="16" height="16" fill="#22d3ee" rx="2"/>
-            {/* Center & Timing Pattern Modules */}
-            <rect x="70" y="20" width="8" height="20" fill="#22d3ee"/>
-            <rect x="85" y="20" width="8" height="10" fill="#22d3ee"/>
-            <rect x="65" y="55" width="12" height="12" fill="#22d3ee"/>
-            <rect x="85" y="55" width="18" height="10" fill="#22d3ee"/>
-            <rect x="70" y="75" width="20" height="20" fill="#38bdf8"/>
-            <rect x="105" y="70" width="15" height="15" fill="#22d3ee"/>
-            <rect x="130" y="70" width="15" height="10" fill="#22d3ee"/>
-            <rect x="20" y="75" width="15" height="10" fill="#22d3ee"/>
-            <rect x="45" y="75" width="10" height="15" fill="#22d3ee"/>
-            <rect x="70" y="110" width="12" height="25" fill="#22d3ee"/>
-            <rect x="90" y="105" width="20" height="10" fill="#22d3ee"/>
-            <rect x="120" y="105" width="25" height="15" fill="#22d3ee"/>
-            <rect x="100" y="125" width="15" height="20" fill="#22d3ee"/>
-            <rect x="125" y="130" width="20" height="15" fill="#22d3ee"/>
-            <text x="80" y="154" fill="#94a3b8" fontSize="6.5" fontFamily="monospace" textAnchor="middle">
-              EJERCICIO 37 · MI PORTAFOLIO
-            </text>
-          </svg>
+        {/* QR Code Container - Código QR 100% Real y Escaneable */}
+        <div className="p-3 bg-white rounded-2xl inline-block shadow-2xl mb-4 border-4 border-cyan-500/30">
+          <QRCodeSVG
+            value={currentUrl}
+            size={200}
+            level="H"
+            includeMargin={true}
+            bgColor="#ffffff"
+            fgColor="#020617"
+          />
+        </div>
+
+        {/* Botón para abrir directamente o descargar imagen */}
+        <div className="flex items-center justify-center gap-2 mb-4">
+          <a
+            href={currentUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="px-3 py-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+          >
+            <ExternalLink className="w-3.5 h-3.5" />
+            <span>Abrir en otra pestaña</span>
+          </a>
+          <a
+            href="/qr.png"
+            download="qr-mi-portafolio.png"
+            className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+          >
+            <Download className="w-3.5 h-3.5 text-cyan-400" />
+            <span>Descargar imagen QR</span>
+          </a>
         </div>
 
         {/* URL Display */}
