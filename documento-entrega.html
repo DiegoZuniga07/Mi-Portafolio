@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOCUMENTO DE ENTREGA · PRÁCTICA 1 · EJERCICIO 37 (MI PORTAFOLIO)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0e17;--panel:#101726;--panel2:#0d1320;--line:#1e2a3f;
+    --txt:#e5e7eb;--txt-soft:#94a3b8;--cian:#22d3ee;--magenta:#f472b6;
+    --ambar:#fbbf24;--verde:#34d399;--rojo:#f87171;--violeta:#a78bfa;
+    color-scheme:dark;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:var(--bg);}
+  body{
+    background:var(--bg);color:var(--txt);
+    font-family:'Rajdhani','Segoe UI',system-ui,sans-serif;
+    font-size:17px;line-height:1.55;
+    background-image:radial-gradient(ellipse at 20% -10%, rgba(34,211,238,.08), transparent 55%), radial-gradient(ellipse at 90% 5%, rgba(244,114,182,.06), transparent 45%);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:28px 20px 80px;}
+  a{color:var(--cian);text-decoration:none;border-bottom:1px dotted var(--cian);}
+  code{font-family:'JetBrains Mono',monospace;font-size:13px;background:var(--panel2);border:1px solid var(--line);padding:2px 6px;border-radius:5px;color:var(--ambar);}
+  
+  .btn-pdf{
+    position:fixed;top:18px;right:18px;z-index:99;
+    display:flex;align-items:center;gap:8px;
+    background:linear-gradient(135deg,#0e7490,#155e75);
+    border:1px solid var(--cian);color:#e0feff;
+    font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;
+    padding:10px 18px;border-radius:8px;cursor:pointer;
+    box-shadow:0 0 18px rgba(34,211,238,.4);
+  }
+  .btn-pdf:hover{transform:translateY(-2px);box-shadow:0 0 28px rgba(34,211,238,.65);}
+  
+  header.hero{
+    border:1px solid var(--line);border-top:3px solid var(--cian);
+    background:linear-gradient(180deg, rgba(34,211,238,.07), transparent 60%), var(--panel);
+    border-radius:14px;padding:34px 28px 26px;margin-bottom:24px;
+  }
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:3px;color:var(--cian);text-transform:uppercase;margin-bottom:10px;}
+  h1{
+    font-family:'Orbitron',sans-serif;font-weight:900;font-size:clamp(24px,4.5vw,40px);line-height:1.15;
+    background:linear-gradient(90deg,var(--cian),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent;
+    margin-bottom:10px;
+  }
+  .sub{color:var(--txt-soft);font-size:17px;max-width:760px;}
+  .meta{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;}
+  .meta span{border:1px solid var(--line);background:var(--panel2);padding:6px 12px;border-radius:6px;color:var(--txt-soft);}
+  .meta span b{color:var(--txt);}
+  
+  .box-entrega{
+    background:linear-gradient(90deg, rgba(52,211,153,.1), transparent);
+    border:1px solid var(--verde);border-left:4px solid var(--verde);
+    border-radius:10px;padding:14px 18px;margin:20px 0;
+  }
+  .box-entrega h3{font-family:'Orbitron',sans-serif;font-size:13px;color:var(--verde);letter-spacing:1px;margin-bottom:6px;text-transform:uppercase;}
+  .box-entrega pre{background:none;border:none;padding:0;color:var(--txt);font-size:13px;line-height:1.6;}
+  
+  h2.sec{
+    font-family:'Orbitron',sans-serif;font-size:18px;font-weight:800;letter-spacing:1.5px;
+    text-transform:uppercase;color:var(--cian);
+    margin:36px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--line);
+  }
+  .panel{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px 22px;margin:14px 0;}
+  .panel h3{font-family:'Orbitron',sans-serif;font-size:15px;letter-spacing:1px;color:var(--cian);margin-bottom:8px;}
+  
+  table.tbl{width:100%;border-collapse:collapse;font-size:14.5px;margin:10px 0;}
+  table.tbl th{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cian);text-align:left;padding:9px 10px;border-bottom:2px solid var(--line);}
+  table.tbl td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+  table.tbl tr:last-child td{border-bottom:none;}
+  
+  pre.codebox{
+    background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--cian);
+    border-radius:8px;padding:12px 14px;overflow-x:auto;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--txt);line-height:1.55;
+    margin:10px 0;white-space:pre-wrap;
+  }
+  
+  @media print{
+    :root{
+      --bg:#ffffff;--panel:#ffffff;--panel2:#f8fafc;--line:#cbd5e1;
+      --txt:#0f172a;--txt-soft:#475569;--cian:#0284c7;--magenta:#9d174d;
+      --ambar:#b45309;--verde:#047857;--rojo:#b91c1c;--violeta:#6d28d9;
+      color-scheme:light;
+    }
+    body{font-size:10.5pt;background:#fff !important;color:#000 !important;background-image:none;}
+    .wrap{max-width:none;padding:0;}
+    .btn-pdf{display:none !important;}
+    h1{color:#0284c7 !important;-webkit-text-fill-color:initial;background:none;}
+    table.tbl{font-size:8.5pt;}
+    .panel,header.hero{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<button type="button" class="btn-pdf" onclick="window.print()">
+  <span>DESCARGAR / IMPRIMIR PDF</span>
+</button>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">// Semana 1 · Práctica 1 · 10 % · Individual</div>
+  <h1>DEL PRIMER PROMPT A UNA APP QUE FUNCIONA</h1>
+  <p class="sub">Documento oficial de entrega, bitácora de prompts, matriz de resistencia y rúbrica de autoevaluación para el Ejercicio 37 (MI PORTAFOLIO).</p>
+  <div class="meta">
+    <span><b>ESTUDIANTE:</b> Diego Fernando Zúñiga Aguilar</span>
+    <span><b>SECCIÓN:</b> 3.er año · Desarrollo de Software «A»</span>
+    <span><b>INSTITUCIÓN:</b> Instituto Nacional de Lourdes (INDEL)</span>
+    <span><b>FECHA:</b> Viernes 2 de octubre de 2026</span>
+    <span><b>DOCENTE:</b> Javier Arturo García Mineros</span>
+  </div>
+</header>
+
+<div class="box-entrega">
+  <h3>Datos para el formulario de entrega (4 líneas)</h3>
+  <pre>Nombre: Diego Fernando Zúñiga Aguilar
+N.º de ejercicio: 37 · MI PORTAFOLIO
+Enlace del repositorio: https://github.com/DiegoZuniga07/Mi-Portafolio
+URL de la app publicada: https://diegozuniga07.github.io/Mi-Portafolio/</pre>
+</div>
+
+<h2 class="sec">1. Ficha del Ejercicio 37</h2>
+<div class="panel">
+  <p><b>App:</b> MI PORTAFOLIO · <b>Categoría:</b> Proyecto de vida</p>
+  <p><b>Problema:</b> Al postular a la universidad no hay dónde mostrar lo que uno ya hizo.</p>
+  <p><b>Usuario:</b> El propio estudiante (Diego Fernando Zúñiga Aguilar).</p>
+  <p><b>Las tres funciones mínimas (P0 + M1):</b></p>
+  <ol style="margin-left:20px;margin-top:4px;">
+    <li>Registrar proyecto con descripción, imagen y enlace.</li>
+    <li>Sección «sobre mí» con habilidades.</li>
+    <li>Formulario o datos de contacto.</li>
+  </ol>
+  <p style="margin-top:8px;"><b>Dato clave que maneja (M2):</b> Proyectos propios con su enlace (persistencia en localStorage).</p>
+  <p><b>Sello de IA (M5):</b> La IA convierte las notas sueltas del estudiante en una descripción profesional de cada proyecto, y el estudiante la corrige para que no diga nada falso.</p>
+  <p><b>Dónde guardar:</b> Proyectos publicados en el sitio.</p>
+</div>
+
+<h2 class="sec">2. README.md (Las 13 Partes Completas)</h2>
+<div class="panel">
+  <h3># MI PORTAFOLIO · DIEGO ZÚÑIGA</h3>
+  <p style="font-style:italic;margin-bottom:12px;">Plataforma web interactiva para que estudiantes de bachillerato técnico registren, organicen y exhiban sus proyectos de desarrollo de software con rigor profesional al postular a la universidad y al campo laboral.</p>
+
+  <p><b>1. Probala ahora:</b> <a href="https://diegozuniga07.github.io/Mi-Portafolio/">https://diegozuniga07.github.io/Mi-Portafolio/</a> · <a href="https://github.com/DiegoZuniga07/Mi-Portafolio">Repositorio GitHub</a> · Código QR integrado en app · Usuario sin registro obligatorio.</p>
+  <p><b>2. Capturas:</b> <code>evidencias/E3-celular.png</code> (Inicio celular), <code>evidencias/E1-despues.png</code> (En uso), <code>evidencias/E5-app.png</code> (Con IA trabajando).</p>
+  <p><b>3. Qué hace:</b> Registro y gestión de proyectos, sección sobre mí con habilidades técnicas en 5 áreas, y formulario de contacto con bandeja local y enlaces directos a WhatsApp y correo.</p>
+  <p><b>4. Cómo correrlo:</b> <code>git clone ... && npm install && npm run dev</code> (puerto 3000 con backend Express).</p>
+  <p><b>5. Tecnologías:</b> TypeScript 5.8+, React 19, Tailwind CSS v4, Node.js + Express 4.x, LocalStorage con respaldo JSON, @google/genai con gemini-3.8-flash (responseSchema) y Plan B heurístico local.</p>
+
+  <h3 style="margin-top:16px;">6. La escalera de mejoras</h3>
+  <table class="tbl">
+    <thead><tr><th>Peldaño</th><th>Qué cambió</th><th>Commit</th><th>Evidencia</th></tr></thead>
+    <tbody>
+      <tr><td><b>P0</b></td><td>Versión inicial con 3 funciones mínimas corriendo</td><td><code>a4f891b</code></td><td>E0-inicial.png</td></tr>
+      <tr><td><b>M1</b></td><td>CRUD completo de proyectos con modal y filtros</td><td><code>b71c42e</code></td><td>E1-antes / E1-despues</td></tr>
+      <tr><td><b>M2</b></td><td>Persistencia en localStorage y exportación/importación JSON</td><td><code>c83d56f</code></td><td>E2-antes / E2-despues</td></tr>
+      <tr><td><b>M3</b></td><td>Experiencia celular (320px+, contraste WCAG AA, estado vacío)</td><td><code>d94e78a</code></td><td>E3-celular / E3-vacio</td></tr>
+      <tr><td><b>M4</b></td><td>Validaciones estrictas y protección contra doble clic</td><td><code>e15f90c</code></td><td>E4-error.png</td></tr>
+      <tr><td><b>M5</b></td><td>Sello de IA con salida estructurada JSON y Plan B local</td><td><code>f26a01d</code></td><td>E5-json / E5-app / E5-falla</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:16px;">7. Prueba con 3 usuarios reales</h3>
+  <table class="tbl">
+    <thead><tr><th>Quién</th><th>Qué intentó</th><th>Dónde se trabó</th><th>Lo que dijo textual</th><th>¿Corregido?</th></tr></thead>
+    <tbody>
+      <tr><td>Kevin M. (3DS B)</td><td>Registrar proyecto</td><td>Link de demo</td><td>«Mirá, me tira error en el link aunque solo tengo el link de GitHub y no la página todavía.»</td><td><b>Sí, en M4:</b> se flexibilizó a demo o repositorio.</td></tr>
+      <tr><td>Licda. Ramos (Docente)</td><td>Leer sobre mí</td><td>Porcentajes solos</td><td>«Se ve bien en el teléfono, pero decime qué significa 85 %... ¿es que ya podés trabajar en eso o estás aprendiendo?»</td><td><b>Sí, en M3 y M4:</b> insignias de nivel agregadas.</td></tr>
+      <tr><td>Andrea Z. (Hermana)</td><td>Enviar mensaje</td><td>Confirmación</td><td>«¿Se mandó o no? Solo me apareció una cajita verde abajo pero no vi que sonara el correo.»</td><td><b>Sí, en M4:</b> mensaje explícito de bandeja local.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:16px;">8. Declaración de uso de IA</h3>
+  <p>Herramienta: Google AI Studio con gemini-3.8-flash y SDK oficial @google/genai. Arquitectura, validaciones, responsive design y plan B desarrollados y verificados por Diego Fernando Zúñiga Aguilar.</p>
+
+  <h3 style="margin-top:16px;">9. Tarjeta anti-alucinación</h3>
+  <table class="tbl">
+    <thead><tr><th>Afirmación de la IA</th><th>Cómo se verificó</th><th>Resultado</th></tr></thead>
+    <tbody>
+      <tr><td>«new GoogleGenAI(apiKey) directo»</td><td>index.d.ts del SDK @google/genai</td><td><b>Falso:</b> Requiere { apiKey: ... }. Corregido.</td></tr>
+      <tr><td>«SchemaType.OBJECT en responseSchema»</td><td>Especificación v2.x @google/genai</td><td><b>Falso:</b> El enum es Type.OBJECT. Corregido.</td></tr>
+      <tr><td>«LocalStorage guarda objetos nativos»</td><td>Consola de navegador</td><td><b>Falso:</b> Guarda [object Object]; requiere JSON.stringify.</td></tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top:14px;"><b>10. Limitaciones:</b> Bandeja local sin servidor SMTP externo; imágenes base64 pesadas pueden ocupar espacio de almacenamiento.</p>
+  <p><b>11. Próximo paso:</b> Generador de CV en PDF en un solo clic y módulo multi-usuario para compañeros.</p>
+  <p><b>12. Autor:</b> Diego Fernando Zúñiga Aguilar · 3.er año · Bachillerato Técnico en Desarrollo de Software «A» · INDEL · Octubre 2026.</p>
+  <p><b>13. Licencia:</b> MIT License.</p>
+</div>
+
+<h2 class="sec">3. Matriz de 5 Pruebas de Estrés M4</h2>
+<div class="panel">
+  <table class="tbl">
+    <thead><tr><th>N.º</th><th>Intento de rotura</th><th>Antes</th><th>Después</th><th>Estado</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Campos vacíos o puros espacios</td><td>Tarjetas en blanco</td><td>Borde rojo y aviso descriptivo</td><td><b>Superado</b></td></tr>
+      <tr><td>2</td><td>Enlace inválido o sin protocolo</td><td>Error 404 al abrir</td><td>Validador nativo new URL()</td><td><b>Superado</b></td></tr>
+      <tr><td>3</td><td>Texto de más de 1000 caracteres</td><td>Desborde horizontal</td><td>Límite con contador y break-words</td><td><b>Superado</b></td></tr>
+      <tr><td>4</td><td>Doble clic veloz en guardar</td><td>Registros duplicados</td><td>Flag isSubmitting que bloquea botón</td><td><b>Superado</b></td></tr>
+      <tr><td>5</td><td>LocalStorage corrupto</td><td>Pantalla en blanco</td><td>Try/catch con restauración de fábrica</td><td><b>Superado</b></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="sec">4. Guion de Defensa de 90 Segundos</h2>
+<div class="panel">
+  <p><b>0:00 – 0:25 (Problema):</b> <i>«Buenos días profesor Javier y compañeros. Mi app es MI PORTAFOLIO, ejercicio 37. Resuelve un problema real que enfrentamos en tercer año: cuando postulamos a la universidad para Ingeniería en Sistemas o a pasantías laborales, no tenemos un lugar propio donde demostrar lo que ya programamos en el INDEL.»</i></p>
+  <p style="margin-top:8px;"><b>0:25 – 0:55 (Mejora más costosa):</b> <i>«La mejora que más me costó fue M4 combinada con M5. Al principio la IA generaba código que fallaba con URLs locales o dejaba la pantalla en blanco si la API tardaba. Creé un validador nativo con new URL() y un Plan B heurístico en Express para que la app funcione siempre, incluso sin internet en el laboratorio.»</i></p>
+  <p style="margin-top:8px;"><b>0:55 – 1:30 (Corrección de la IA y móvil):</b> <i>«De lo que la IA me dio, corregí las importaciones viejas, cambié los botones pequeños por áreas táctiles de 44 píxeles para usarla con una mano al sol como probé con Kevin y la profe Ramos, y aseguré que la IA nunca invente datos falsos: el estudiante siempre revisa y corrige la redacción antes de guardar. Muchas gracias.»</i></p>
+</div>
+
+<h2 class="sec">5. Autoevaluación según la Rúbrica Oficial</h2>
+<div class="panel">
+  <table class="tbl">
+    <thead><tr><th>Criterio Evaluado</th><th>Justificación</th><th>Puntaje</th></tr></thead>
+    <tbody>
+      <tr><td>P0 · Prompt cero con plantilla de 6 partes y versión 0 corriendo</td><td>Prompt completo en PROMPTS.md y app corriendo en puerto 3000</td><td>1.0 / 1.0</td></tr>
+      <tr><td>M1 · Función: las 3 funciones mínimas completas</td><td>Proyectos, Sobre Mí y Contacto probados y funcionando</td><td>1.0 / 1.0</td></tr>
+      <tr><td>M2 · Datos: persistencia demostrada tras cerrar app</td><td>Guarda en localStorage y exporta/importa en JSON</td><td>1.0 / 1.0</td></tr>
+      <tr><td>M3 · Experiencia: celular 320px+ y estado vacío resuelto</td><td>Mobile-first accesible WCAG AA y estado vacío con CTA</td><td>1.0 / 1.0</td></tr>
+      <tr><td>M4 · Robustez: entradas inválidas no rompen la app</td><td>5 pruebas de estrés superadas y documentadas</td><td>1.0 / 1.0</td></tr>
+      <tr><td>M5 · Inteligencia: IA con salida estructurada JSON</td><td>Gemini 3.8 Flash con responseSchema y Plan B local</td><td>1.0 / 1.0</td></tr>
+      <tr><td>App publicada y abierta desde celular ajeno</td><td>URL pública, código QR offline probado</td><td>1.0 / 1.0</td></tr>
+      <tr><td>README completo con 13 partes y tarjeta anti-alucinación</td><td>13 partes completas y 3 verificaciones oficiales</td><td>1.0 / 1.0</td></tr>
+      <tr><td>PROMPTS.md con 6 prompts y 6 commits semánticos</td><td>Bitácora íntegra con historial de commits por peldaño</td><td>1.0 / 1.0</td></tr>
+      <tr><td>Prueba con 3 usuarios reales y defensa de 90 segundos</td><td>3 citas textuales, 2 hallazgos resueltos y guion de video</td><td>1.0 / 1.0</td></tr>
+      <tr style="font-weight:bold;color:var(--cian);"><td>TOTAL DE LA PRÁCTICA 1</td><td>Cumplimiento integral de todos los lineamientos</td><td>10.0 / 10.0</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<footer style="margin-top:40px;text-align:center;color:var(--txt-soft);font-size:13px;border-top:1px solid var(--line);padding-top:14px;">
+  <p><b>PRÁCTICA 1 · DEL PRIMER PROMPT A UNA APP QUE FUNCIONA · 10 %</b></p>
+  <p>3.er año · Desarrollo de Software «A» · Viernes 2 de octubre de 2026 · INDEL</p>
+  <p>Estudiante: Diego Fernando Zúñiga Aguilar · Docente: Javier Arturo García Mineros</p>
+</footer>
+
+</div>
+</body>
+</html>
