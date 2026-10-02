@@ -20,8 +20,8 @@ export const INITIAL_PROJECTS: Project[] = [
     title: 'Mi Bolsillo · Control Financiero Estudiantil',
     description: 'Aplicación web orientada a jóvenes estudiantes para presupuestar viáticos diarios, clasificar egresos en tiempo real y emitir alertas visuales tipo semáforo cuando el gasto acumulado se aproxima a la cuota límite establecida.',
     imageUrl: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
-    projectUrl: 'https://diego-zuniga-indel.github.io/mi-bolsillo',
-    repoUrl: 'https://github.com/diego-zuniga-indel/mi-bolsillo',
+    projectUrl: 'https://diegozuniga07.github.io/mi-bolsillo',
+    repoUrl: 'https://github.com/DiegoZuniga07/mi-bolsillo',
     category: 'Web',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'LocalStorage'],
     highlights: [
@@ -37,8 +37,8 @@ export const INITIAL_PROJECTS: Project[] = [
     title: 'Recicla Puntos · Gestión Escolar Ambiental',
     description: 'Sistema web interactivo para medir el pesaje de plástico y papel aportado por secciones del instituto, computando tabla de clasificación gamificada y cálculo de equivalencias ambientales (árboles salvados y agua ahorrada).',
     imageUrl: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80',
-    projectUrl: 'https://diego-zuniga-indel.github.io/recicla-puntos',
-    repoUrl: 'https://github.com/diego-zuniga-indel/recicla-puntos',
+    projectUrl: 'https://diegozuniga07.github.io/recicla-puntos',
+    repoUrl: 'https://github.com/DiegoZuniga07/recicla-puntos',
     category: 'Educación',
     tags: ['TypeScript', 'Vite', 'CSS Grid', 'IndexedDB'],
     highlights: [
@@ -54,8 +54,8 @@ export const INITIAL_PROJECTS: Project[] = [
     title: 'Ruta Segura · Red Colaborativa Cantonal',
     description: 'Herramienta pensada para estudiantes y trabajadores que transitan a pie, permitiendo documentar tramos con luminarias dañadas o zonas poco transitadas con marcas temporales y rutas recomendadas según la hora.',
     imageUrl: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80',
-    projectUrl: 'https://diego-zuniga-indel.github.io/ruta-segura',
-    repoUrl: 'https://github.com/diego-zuniga-indel/ruta-segura',
+    projectUrl: 'https://diegozuniga07.github.io/ruta-segura',
+    repoUrl: 'https://github.com/DiegoZuniga07/ruta-segura',
     category: 'Sistemas',
     tags: ['JavaScript', 'PWA', 'Tailwind', 'GeoJSON'],
     highlights: [
@@ -71,8 +71,8 @@ export const INITIAL_PROJECTS: Project[] = [
     title: 'Repaso Espaciado · Simulador de Admisión Universitaria',
     description: 'Plataforma de tarjetas nemotécnicas basada en el algoritmo Leitner que ajusta los intervalos de repaso según la dificultad autoevaluada por el estudiante en materias de matemática, física, lenguaje y ciencias.',
     imageUrl: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
-    projectUrl: 'https://diego-zuniga-indel.github.io/repaso-admision',
-    repoUrl: 'https://github.com/diego-zuniga-indel/repaso-admision',
+    projectUrl: 'https://diegozuniga07.github.io/repaso-admision',
+    repoUrl: 'https://github.com/DiegoZuniga07/repaso-admision',
     category: 'IA / Datos',
     tags: ['React', 'Node.js', 'Algoritmos', 'Chart.js'],
     highlights: [

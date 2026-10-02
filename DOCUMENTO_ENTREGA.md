@@ -10,8 +10,8 @@
 ```text
 Nombre: Diego Fernando Zúñiga Aguilar
 N.º de ejercicio: 37 · MI PORTAFOLIO
-Enlace del repositorio: https://github.com/diego-zuniga-indel/mi-portafolio
-URL de la app publicada: https://diego-zuniga-indel.github.io/mi-portafolio
+Enlace del repositorio: https://github.com/DiegoZuniga07/Mi-Portafolio
+URL de la app publicada: https://diegozuniga07.github.io/Mi-Portafolio
 ```
 
 ---
@@ -39,7 +39,7 @@ URL de la app publicada: https://diego-zuniga-indel.github.io/mi-portafolio
 > Plataforma web interactiva para que estudiantes de bachillerato técnico registren, organicen y exhiban sus proyectos de desarrollo de software con rigor profesional al postular a la universidad y al campo laboral.
 
 ### 1. Probala ahora
-- **App publicada:** https://diego-zuniga-indel.github.io/mi-portafolio
+- **App publicada:** https://diegozuniga07.github.io/Mi-Portafolio
 - **Código QR:** Disponible en la barra de herramientas de la app y en `evidencias/qr.svg`.
 - **Usuario de prueba:** No requiere autenticación; incluye catálogo precargado y persistente.
 
@@ -55,8 +55,8 @@ URL de la app publicada: https://diego-zuniga-indel.github.io/mi-portafolio
 
 ### 4. Cómo correrlo en tu máquina
 ```bash
-git clone https://github.com/diego-zuniga-indel/mi-portafolio.git
-cd mi-portafolio
+git clone https://github.com/DiegoZuniga07/Mi-Portafolio.git
+cd Mi-Portafolio
 cp .env.example .env
 npm install
 npm run dev

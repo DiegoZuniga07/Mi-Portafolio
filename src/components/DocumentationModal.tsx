@@ -57,7 +57,8 @@ export const DocumentationModal: React.FC<DocumentationModalProps> = ({
 > Plataforma web interactiva para que estudiantes de bachillerato técnico registren, organicen y exhiban sus proyectos de desarrollo de software con rigor profesional al postular a la universidad y al campo laboral.
 
 ## 1. Probala ahora
-- **App publicada:** https://diego-zuniga-indel.github.io/mi-portafolio
+- **App publicada:** https://diegozuniga07.github.io/Mi-Portafolio
+- **Repositorio oficial en GitHub:** https://github.com/DiegoZuniga07/Mi-Portafolio
 - **Código QR:** Disponible en la barra de herramientas y en evidencias/qr.svg
 - **Usuario de prueba:** No requiere autenticación; incluye catálogo precargado y persistente.
 
@@ -73,8 +74,8 @@ export const DocumentationModal: React.FC<DocumentationModalProps> = ({
 
 ## 4. Cómo correrlo en tu máquina
 \`\`\`bash
-git clone https://github.com/diego-zuniga-indel/mi-portafolio.git
-cd mi-portafolio
+git clone https://github.com/DiegoZuniga07/Mi-Portafolio.git
+cd Mi-Portafolio
 cp .env.example .env
 npm install
 npm run dev
@@ -269,7 +270,8 @@ MIT License.`;
               <div className="p-4 rounded-xl bg-slate-950/70 border border-slate-800 space-y-2">
                 <h3 className="text-base font-bold text-cyan-400 font-mono">1. Probala ahora</h3>
                 <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm">
-                  <li><b>App publicada:</b> <a href="https://diego-zuniga-indel.github.io/mi-portafolio" target="_blank" rel="noreferrer" className="text-cyan-400 underline">https://diego-zuniga-indel.github.io/mi-portafolio</a></li>
+                  <li><b>App publicada:</b> <a href="https://diegozuniga07.github.io/Mi-Portafolio" target="_blank" rel="noreferrer" className="text-cyan-400 underline">https://diegozuniga07.github.io/Mi-Portafolio</a></li>
+                  <li><b>Repositorio oficial GitHub:</b> <a href="https://github.com/DiegoZuniga07/Mi-Portafolio" target="_blank" rel="noreferrer" className="text-cyan-400 underline">https://github.com/DiegoZuniga07/Mi-Portafolio</a></li>
                   <li><b>Despliegue activo:</b> AI Studio Cloud Run (puerto 3000 con backend Express).</li>
                   <li><b>Código QR:</b> Accesible en modal dedicado y exportable en <code>evidencias/qr.png</code>.</li>
                   <li><b>Usuario de prueba:</b> No requiere clave; opera con catálogo inicial persistente.</li>
@@ -309,8 +311,8 @@ MIT License.`;
               <div className="p-4 rounded-xl bg-slate-950/70 border border-slate-800 space-y-2">
                 <h3 className="text-base font-bold text-cyan-400 font-mono">4. Cómo correrlo en tu máquina</h3>
                 <pre className="p-3 rounded-lg bg-slate-900 text-xs font-mono text-amber-300 overflow-x-auto">
-{`git clone https://github.com/diego-zuniga-indel/mi-portafolio.git
-cd mi-portafolio
+{`git clone https://github.com/DiegoZuniga07/Mi-Portafolio.git
+cd Mi-Portafolio
 cp .env.example .env
 npm install
 npm run dev

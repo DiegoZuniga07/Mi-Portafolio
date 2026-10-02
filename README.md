@@ -5,7 +5,8 @@
 ---
 
 ## 1. Probala ahora
-- **App publicada:** [https://diego-zuniga-indel.github.io/mi-portafolio](https://diego-zuniga-indel.github.io/mi-portafolio)
+- **App publicada:** [https://diegozuniga07.github.io/Mi-Portafolio](https://diegozuniga07.github.io/Mi-Portafolio)
+- **Repositorio oficial en GitHub:** [https://github.com/DiegoZuniga07/Mi-Portafolio](https://github.com/DiegoZuniga07/Mi-Portafolio)
 - **Despliegue activo:** Entorno AI Studio Build / Servidor Express full-stack.
 - **Código QR para celular:**
   ```text
@@ -37,8 +38,8 @@
 ## 4. Cómo correrlo en tu máquina
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/diego-zuniga-indel/mi-portafolio.git
-cd mi-portafolio
+git clone https://github.com/DiegoZuniga07/Mi-Portafolio.git
+cd Mi-Portafolio
 
 # 2. Configurar variables de entorno
 cp .env.example .env

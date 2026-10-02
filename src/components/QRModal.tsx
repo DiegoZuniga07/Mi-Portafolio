@@ -11,7 +11,7 @@ export const QRModal: React.FC<QRModalProps> = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://diego-zuniga-indel.github.io/mi-portafolio';
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://diegozuniga07.github.io/Mi-Portafolio';
 
   const copyUrl = () => {
     navigator.clipboard.writeText(currentUrl);
